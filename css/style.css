@@ -1,3 +1,12 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 ul {
   list-style: none;
 }
@@ -24,7 +33,7 @@ a {
   --border-color: #ececec;
 }
 
-/*общие стили для index.html*/
+/*общие стили для index.html */
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -33,11 +42,21 @@ body {
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--text-color-black);
-  background-color: var(--text-color-white);
+  /* background-color: var(--text-color-white); */
+  background-color: turquoise;
 }
 
 /*шапка сайта*/
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* delete */
+  outline: 2px solid tomato;
+}
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -47,9 +66,7 @@ body {
 .studio-logo {
   color: var(--text-color-black-logo);
 }
-footer .studio-logo {
-  color: var(--text-color-white);
-}
+
 .nav-link {
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -70,6 +87,9 @@ footer .studio-logo {
 /* секция герой  */
 .hero {
   background-color: var(--background-color-gray);
+  text-align: center;
+
+  padding: 200px 0 200px 0;
 }
 .hero-title {
   font-weight: 900;
@@ -77,24 +97,36 @@ footer .studio-logo {
   line-height: 1.36;
   letter-spacing: 0.06em;
   color: var(--text-color-white);
-  text-align: center;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
-.hero-btn {
+.hero-button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
   background-color: var(--accent-color);
   color: var(--text-color-white);
+  display: inline-block;
+  padding: 10px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 /* секция особенности и чем мы занимаемся */
-.about-us .title {
+
+.title {
   display: none;
+}
+.about-us {
+  padding: 94px 0 94px 0;
+}
+.about-us-list {
+  margin-bottom: 94px;
 }
 
 .about-us-title {
+  margin-bottom: 10px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -107,31 +139,61 @@ footer .studio-logo {
   font-weight: 700;
   font-size: 36px;
   text-align: center;
+  margin-bottom: 50px;
+}
+.what-we-do-list li {
+  display: inline-block;
+}
+.what-we-do-img {
+  width: 370px;
+  height: 294px;
 }
 
 /* секция наша команда */
 
 .team {
   background-color: #f5f4fa;
+  padding: 94px 0 94px 0;
 }
-.team-list {
+.team-list li {
   background-color: var(--text-color-white);
+  display: inline-block;
+  border-radius: 4px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  /* внизу исправить!!!!!!!! delete */
+  margin: 5px;
+}
+.photo {
+  margin-bottom: 30px;
 }
 .team-worker {
   font-weight: 500;
   font-size: 16px;
   text-align: center;
+  margin-bottom: 10px;
 }
 .profession {
   font-size: 16px;
   color: var(--text-color-grey);
   text-align: center;
+  margin-bottom: 30px;
 }
 
 /* футер */
 
 .footer {
   background-color: var(--background-color-gray);
+}
+.footer-nav {
+  padding: 60px 0 60px 0;
+}
+.logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+footer .studio-logo {
+  color: var(--text-color-white);
 }
 .footer-auth-nav .link {
   line-height: 1.71;
@@ -144,20 +206,23 @@ footer .studio-logo {
 
 /* оформление для сайта портфолио */
 
-/* мейн */
-
-.menu-button {
+.button-icon {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   background-color: var(--background-color-bottom);
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: none;
 }
-.current.menu-button,
-.menu-button:hover,
-.menu-button:focus {
+.current.button-icon,
+.button-icon:hover,
+.button-icon:focus {
   background-color: var(--accent-color);
   color: var(--text-color-white);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .project-name {
