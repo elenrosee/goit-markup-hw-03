@@ -245,6 +245,7 @@ body {
 /* оформление для сайта портфолио */
 .our-works {
   padding: 94px 0;
+  border-top: 1px solid var(--border-color);
 }
 
 .button {
